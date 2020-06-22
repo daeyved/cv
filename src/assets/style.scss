@@ -1,0 +1,109 @@
+// vars & imports
+$bg : #2b2a2d;
+$primary: #ffa6c6;
+$secondary: #66d9ef;
+$tertiary: #4abfab;
+$white: #e4e4e4;
+$fontsize: 18px;
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+//transition
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.2s;
+  transition-property: all;
+  transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+  transform: translateY(50px)
+}
+
+html, body {
+  background: $bg;
+  font-size: $fontsize;
+  line-height: $fontsize*1.5;
+  color: $white;
+  margin: 0;
+  font-family: 'Fira Code', monospace;
+  height: 100%
+}
+
+#app {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%
+}
+
+aside {
+  background: lighten($bg, 2%);
+  border-right: 1px solid lighten($bg, 10%);
+}
+
+footer {
+  width: 100%;
+  background-color: $primary;
+  padding: 0 10px;
+  color: $bg;
+  position: fixed;
+  bottom: 0;
+}
+
+//text
+h1, h2, h3, h4, p{
+  font-size: $fontsize;
+  margin: 0;
+}
+
+.comment {
+  color: lighten($bg, 40%);
+  &::before {
+    content: '//'
+  }
+}
+.prim {
+  color: $primary;
+}
+
+.sec {
+  color: $secondary;
+}
+
+.ter {
+  color: $tertiary;
+}
+
+.it {
+  font-style: italic;
+}
+
+dl {
+  margin: 0;
+  padding-left: 30px;
+  dd {
+    margin: 0;
+    display: inline;
+    &::before {
+      content: '"';
+      color: $white;
+    }
+    &::after {
+      content: '",';
+      color: $white;
+    }
+  }
+  dt {
+    display: inline;
+    &::before {
+      content: '';
+      display: block;
+    }
+  }
+}
+
+.block {
+  margin: 30px;
+  max-width:800px;
+}
