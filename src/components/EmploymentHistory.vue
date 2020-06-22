@@ -19,7 +19,7 @@ export default {
       pagetitle: 'employment',
       jobs: [
         {
-          title: 'BlueLeaf__OSF Digital',
+          title: 'BlueLeaf__OSF_Digital',
           details: 'June 2017 - Present | Full stack developer',
           description: 'A broad-based web development role working on large scale eCommerce sites on the Salesforce Commerce Cloud (SFCC) platform. I have worked both on support and on new build projects. This includes anything from identifying and resolving JS or layout bugs to rolling out new features like lazy-load or enhanced ajax based search features and creating page layouts. Working in teams has meant collaboration, liaising with team members in QA and project management and directly with clients'
         },
