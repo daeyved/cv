@@ -17,11 +17,6 @@ import navigation from './components/Navigation.vue'
 import myfooter from './components/MyFooter.vue'
 export default {
   name: 'app',
-  data () {
-    return {
-
-    }
-  },
   components: {
     navigation,
     myfooter
