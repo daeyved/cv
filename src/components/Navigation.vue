@@ -4,7 +4,7 @@
       <li><router-link to="/">about_me.js</router-link></li>
       <li><router-link to="/employment">employment.js</router-link></li>
       <li><router-link to="/education">education.js</router-link></li>
-      <li><router-link to="/">about me</router-link></li>
+      <li><router-link to="/contact">contact.js</router-link></li>
     </ul>
   </nav>
 </template>

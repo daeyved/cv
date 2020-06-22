@@ -4,13 +4,13 @@ $primary: #ffa6c6;
 $secondary: #66d9ef;
 $tertiary: #4abfab;
 $white: #e4e4e4;
-$fontsize: 18px;
+$fontsize: 20px;
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 //transition
 .fade-enter-active,
 .fade-leave-active {
-  transition-duration: 0.2s;
+  transition-duration: 0.13s;
   transition-property: all;
   transition-timing-function: ease;
 }
@@ -18,7 +18,7 @@ $fontsize: 18px;
 .fade-enter,
 .fade-leave-active {
   opacity: 0;
-  transform: translateX(100px)
+  transform: translateX(50px)
 }
 
 html, body {
@@ -109,11 +109,14 @@ dl {
 }
 
 nav {
-  ul li {
-    list-style: none;
-    a {
-      color: $primary;
-      text-decoration: none;
+  ul {
+    padding: 0;
+    li {
+      list-style: none;
+      a {
+        color: $primary;
+        text-decoration: none;
+      }
     }
   }
 }
