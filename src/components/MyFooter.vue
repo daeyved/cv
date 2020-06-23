@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>somecontent</p>
+    <p>Made in Vue.js &amp; Deployed on netlify</p>
   </footer>
 </template>
 

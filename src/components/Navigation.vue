@@ -1,12 +1,13 @@
 <template>
   <nav>
-    <svg viewBox="0 0 50 40" width="20" height="20" class="mobile-nav-toggle" @click="toggleNav">
-      <rect width="50" height="10"></rect>
-      <rect y="15" width="50" height="10"></rect>
-      <rect y="30" width="50" height="10"></rect>
+    <svg viewBox="0 0 50 40" width="20" height="20" class="mobile-nav-toggle" :class="mobnav" @click="toggleNav">
+      <rect width="50" height="10" class="x-top"></rect>
+      <rect y="15" width="50" height="10" class="x-fwd"></rect>
+      <rect y="15" width="50" height="10" class="x-bck"></rect>
+      <rect y="30" width="50" height="10" class="x-btm"></rect>
     </svg>
     <ul :class="mobnav">
-      <li><router-link to="/">about_me.js</router-link></li>
+      <li><router-link to="/" exact>about_me.js</router-link></li>
       <li><router-link to="/employment">employment.js</router-link></li>
       <li><router-link to="/education">education.js</router-link></li>
       <li><router-link to="/contact">contact.js</router-link></li>

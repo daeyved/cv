@@ -4,7 +4,7 @@
       <h1 class="prim"><span>const </span><span class="sec it">{{ pagetitle }}</span> = {</h1>
       <dl>
         <dt class="prim">name:</dt><dd class="ter">{{ name }}</dd>
-        <dt class="prim">email:</dt><dd class="ter">{{ email }}</dd>
+        <dt class="prim">email:</dt><dd class="ter"><a :href="'mailto:' + email">{{ email }}</a></dd>
         <dt class="prim">telephone:</dt><dd class="ter">{{ tel }}</dd>
         <dt class="prim">statement:</dt><dd class="ter">{{ statement }}</dd>
       </dl>
