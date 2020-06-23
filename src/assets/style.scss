@@ -107,6 +107,9 @@ aside {
         a {
           color: $primary;
           text-decoration: none;
+          @media only screen and (max-width: $bp) {
+            padding: 0.5rem;
+          }
           &.router-link-active {
             color: $white;
           }
