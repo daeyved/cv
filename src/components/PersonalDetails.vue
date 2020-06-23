@@ -1,13 +1,15 @@
 <template>
   <div id="details" class="block">
-    <h1 class="prim"><span>const </span><span class="sec it">{{ pagetitle }}</span> = {</h1>
-    <dl>
-      <dt class="prim">name:</dt><dd class="ter">{{ name }}</dd>
-      <dt class="prim">email:</dt><dd class="ter">{{ email }}</dd>
-      <dt class="prim">telephone:</dt><dd class="ter">{{ tel }}</dd>
-      <dt class="prim">statement:</dt><dd class="ter">{{ statement }}</dd>
-    </dl>
-    <span class="prim">}</span>
+    <div class="obj">
+      <h1 class="prim"><span>const </span><span class="sec it">{{ pagetitle }}</span> = {</h1>
+      <dl>
+        <dt class="prim">name:</dt><dd class="ter">{{ name }}</dd>
+        <dt class="prim">email:</dt><dd class="ter">{{ email }}</dd>
+        <dt class="prim">telephone:</dt><dd class="ter">{{ tel }}</dd>
+        <dt class="prim">statement:</dt><dd class="ter">{{ statement }}</dd>
+      </dl>
+      <span class="prim">}</span>
+    </div>
   </div>
 </template>
 

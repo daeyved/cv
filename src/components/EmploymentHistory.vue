@@ -1,13 +1,13 @@
 <template>
   <div id="employment" class="block">
-    <template v-for="(job, i) in jobs">
+    <div class="obj" v-for="(job, i) in jobs":key="'wrap' + i">
     <h1 class="prim" :key="'title' + i"><span>const </span><span class="sec it">{{ job.title }}</span> = {</h1>
     <dl :key="'details' + i">
       <dt class="prim">details:</dt><dd class="ter">{{ job.details }}</dd>
       <dt class="prim">description:</dt><dd class="ter">{{ job.description }}</dd>
     </dl>
     <span class="prim" :key="'end' + i">}</span>
-    </template>
+    </div>
   </div>
 </template>
 
