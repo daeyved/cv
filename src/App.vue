@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <div id="app" :class="theme">
     <aside>
-      <navigation></navigation>
+      <navigation @themeSwitched="theme = $event"></navigation>
     </aside>
     <main>
       <transition name="fade" mode="out-in">
@@ -17,6 +17,11 @@ import navigation from './components/Navigation.vue'
 import myfooter from './components/MyFooter.vue'
 export default {
   name: 'app',
+  data () {
+    return {
+      theme: 'dark'
+    }
+  },
   components: {
     navigation,
     myfooter

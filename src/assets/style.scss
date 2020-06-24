@@ -3,7 +3,14 @@ $bg : #2b2a2d;
 $primary: #ffa6c6;
 $secondary: #66d9ef;
 $tertiary: #4abfab;
-$white: #e4e4e4;
+$opp: #e4e4e4;
+
+$lt-bg : #e4e4e4;
+$lt-primary: #01415e;
+$lt-secondary: #493f49;
+$lt-tertiary: #333a77;
+$lt-opp: #353535;
+
 $bp: 850px;
 $bx: 1150px;
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
@@ -27,7 +34,6 @@ $bx: 1150px;
 }
 
 html, body {
-  background: $bg;
   font-size: 16px;
   line-height: 1.5rem;
   @media only screen and (min-width: $bp) {
@@ -36,7 +42,6 @@ html, body {
   @media only screen and (min-width: $bx) {
     font-size: 24px
   }
-  color: $white;
   margin: 0;
   font-family: 'Fira Code', monospace;
   height: 100%
@@ -44,6 +49,12 @@ html, body {
 
 #app {
   display: flex;
+  min-height: 100vh;
+  background: $bg;
+  transition: background-color 0.5s;
+  &.light {
+    background-color: $lt-bg;
+  }
 }
 
 aside {
@@ -61,7 +72,13 @@ aside {
     top: 0;
     .mobile-nav-toggle {
       fill: $bg;
+      .light & {
+        fill: $lt-bg;
+      }
       background: $primary;
+      .light & {
+        background: $lt-primary;
+      }
       padding:10px;
       width:40px;
       height:40px;
@@ -93,7 +110,12 @@ aside {
       padding: 1rem;
       margin: 0;
       background: $bg;
-      transition: all 0.2s;
+      .light & {
+        background: $lt-bg;
+      }
+      @media only screen and (max-width: $bp) {
+        transition: all 0.2s;
+      }
       &.inactive {
         opacity: 0;
         transform: translateY(50px);
@@ -106,12 +128,18 @@ aside {
         list-style: none;
         a {
           color: $primary;
+          .light & {
+            color: $lt-primary;
+          }
           text-decoration: none;
           @media only screen and (max-width: $bp) {
             padding: 0.5rem;
           }
           &.router-link-active {
-            color: $white;
+            color: $opp;
+            .light & {
+              color: $lt-opp;
+            }
           }
         }
       }
@@ -124,6 +152,9 @@ main {
   width: 100%;
   @media only screen and (min-width: $bp) {
     border-left: 1px solid lighten($bg, 10%);
+    .light & {
+      border-left: 1px solid darken($lt-bg, 10%);
+    }
   }
 }
 
@@ -131,8 +162,14 @@ footer {
   font-family: sans-serif;
   width: 100%;
   background-color: $primary;
+  .light & {
+    background-color: $lt-primary;
+  }
   padding: 0 10px;
   color: $bg;
+  .light & {
+    color: $lt-bg;
+  }
   position: fixed;
   bottom: 0;
   p {
@@ -154,20 +191,32 @@ a {
 
 .comment {
   color: lighten($bg, 40%);
+  .light & {
+    color: darken($lt-bg, 40%);
+  }
   &::before {
     content: '//'
   }
 }
 .prim, .prim a {
   color: $primary;
+  .light & {
+    color: $lt-primary;
+  }
 }
 
 .sec, .sec a {
   color: $secondary;
+  .light & {
+    color: $lt-secondary;
+  }
 }
 
 .ter, .ter a {
   color: $tertiary;
+  .light & {
+    color: $lt-tertiary;
+  }
 }
 
 .it {
@@ -186,15 +235,24 @@ a {
       display: inline;
       &::before {
         content: '"';
-        color: $white;
+        color: $opp;
+        .light & {
+          color: $lt-opp;
+        }
       }
       &:not(:last-of-type)::after {
         content: '",';
-        color: $white;
+        color: $opp;
+        .light & {
+          color: $lt-opp;
+        }
       }
       &:last-of-type::after {
         content: '"';
-        color: $white;
+        color: $opp;
+        .light & {
+          color: $lt-opp;
+        }
       }
     }
     dt {
@@ -216,10 +274,16 @@ form {
   margin: 1em 0;
   input, textarea {
     background: lighten($bg, 3%);
+    .light & {
+      background: darken($lt-bg, 3%);
+    }
     border: none;
     outline: none;
     font-family: 'Fira Code', monospace;
     color: $tertiary;
+    .light & {
+      color: $lt-tertiary;
+    }
     display: block;
     width: 100%;
     margin: 0 0 1rem 0;
@@ -233,6 +297,9 @@ form {
     outline: none;
     border: none;
     background: $secondary;
+    .light & {
+      background: $lt-secondary;
+    }
     font-size: 1rem;
     padding: 0.4rem 1rem;
   }

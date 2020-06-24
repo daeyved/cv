@@ -10,7 +10,7 @@
       <li><router-link to="/" exact>about_me.js</router-link></li>
       <li><router-link to="/employment">employment.js</router-link></li>
       <li><router-link to="/education">education.js</router-link></li>
-      <li><router-link to="/contact">contact.js</router-link></li>
+      <li @click="toggleTheme"><a href="#">switch_theme.js</a></li>
     </ul>
   </nav>
 </template>
@@ -24,7 +24,8 @@ export default {
       name: 'David Wright',
       email: 'dave.vj@gmail.com',
       tel: '07815 103939',
-      mobnav: 'inactive'
+      mobnav: 'inactive',
+      theme: 'dark'
     }
   },
   watch: {
@@ -35,6 +36,10 @@ export default {
   methods: {
     toggleNav() {
       this.mobnav = this.mobnav === 'active' ? 'inactive' : 'active'
+    },
+    toggleTheme() {
+      this.theme = this.theme === 'dark' ? 'light' : 'dark'
+      this.$emit('themeSwitched', this.theme);
     }
   }
 }
