@@ -6,8 +6,8 @@ $tertiary: #4abfab;
 $opp: #e4e4e4;
 
 $lt-bg : #e4e4e4;
-$lt-primary: #01415e;
-$lt-secondary: #493f49;
+$lt-primary: #0c9b86;
+$lt-secondary: #707070;
 $lt-tertiary: #333a77;
 $lt-opp: #353535;
 
@@ -134,6 +134,7 @@ aside {
           text-decoration: none;
           @media only screen and (max-width: $bp) {
             padding: 0.5rem;
+            display: inline-block
           }
           &.router-link-active {
             color: $opp;
