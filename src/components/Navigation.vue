@@ -10,6 +10,7 @@
       <li><router-link to="/" exact>about_me.js</router-link></li>
       <li><router-link to="/employment">employment.js</router-link></li>
       <li><router-link to="/education">education.js</router-link></li>
+      <li><router-link to="/skills">skills.js</router-link></li>
       <li @click="toggleTheme"><a href="#">switch_theme.js</a></li>
     </ul>
   </nav>
