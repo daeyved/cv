@@ -120,6 +120,12 @@ aside {
           opacity: 1;
         }
       }
+      .dark &.active {
+        background: $bg;
+      }
+      .light &.active {
+        background: $lt-bg;
+      }
       li {
         list-style: none;
         a {
