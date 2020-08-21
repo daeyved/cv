@@ -23,7 +23,6 @@ export default {
         'CSS',
         'SCSS',
         'Bootstrap',
-        'WebPack',
         'WordPress',
         'Salesforce Commerce Cloud',
         'HTML email',
