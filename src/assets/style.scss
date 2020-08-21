@@ -109,10 +109,6 @@ aside {
     ul {
       padding: 1rem;
       margin: 0;
-      background: $bg;
-      .light & {
-        background: $lt-bg;
-      }
       @media only screen and (max-width: $bp) {
         transition: all 0.2s;
       }
