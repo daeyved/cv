@@ -1,6 +1,6 @@
 <template>
   <div id="education" class="block">
-    <div class="obj" v-for="(ed, i) in eds":key="'wrap' + i">
+    <div class="obj" v-for="(ed, i) in eds" :key="'wrap' + i">
     <h1 class="prim" :key="'title' + i"><span>const </span><span class="sec it">{{ ed.title }}</span> = {</h1>
     <dl :key="'details' + i">
       <dt class="prim">qualifications:</dt><dd class="ter">{{ ed.details }}</dd>
